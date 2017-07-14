@@ -21,16 +21,40 @@ class DijkstraTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSimpleGraph() {
+        let endingVertex = Vertex(key: "B", neighbors: [])
+        let startingVertex = Vertex(key: "A", neighbors: [Edge(destination: endingVertex, weight: 5)])
+        
+        let simpleGraph = Graph(vertices: [startingVertex, endingVertex])
+        let shortestPath = simpleGraph.processDijkstra(source: startingVertex.key, to: endingVertex.key)
+        let expectedPath = [startingVertex, endingVertex]
+        
+        XCTAssertEqual(expectedPath, shortestPath)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testNotSoSimpleGraph() {
+        let endingVertex = Vertex(key: "E", neighbors: [])
+        let middleVertex = Vertex(key: "D", neighbors: [Edge(destination: endingVertex, weight: 8)])
+        let startingVertex = Vertex(key: "A", neighbors: [Edge(destination: middleVertex, weight: 4)])
+        let simpleGraph = Graph(vertices: [startingVertex, endingVertex, middleVertex])
+        
+        let shortestPath = simpleGraph.processDijkstra(source: startingVertex.key, to: endingVertex.key)
+        let expectedPath = [startingVertex, middleVertex, endingVertex]
+        
+        XCTAssertEqual(expectedPath, shortestPath)
     }
     
+/*    func testExtraNodeInGraph() {
+        let extraVertex = Vertex(key: "M", neighbors: [])
+        let endingVertex = Vertex(key: "E", neighbors: [Edge(destination: extraVertex, weight: 3)])
+        let middleVertex = Vertex(key: "D", neighbors: [Edge(destination: endingVertex, weight: 8)])
+        let startingVertex = Vertex(key: "A", neighbors: [Edge(destination: middleVertex, weight: 4)])
+        let simpleGraph = Graph(vertices: [startingVertex, endingVertex, middleVertex])
+        
+        let shortestPath = simpleGraph.processDijkstra(source: startingVertex.key, to: endingVertex.key)
+        let expectedPath = [startingVertex, middleVertex, endingVertex]
+        
+        XCTAssertEqual(expectedPath, shortestPath)
+    }
+*/
 }
