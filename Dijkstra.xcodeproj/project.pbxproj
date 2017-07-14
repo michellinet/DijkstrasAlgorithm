@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DF86D8D51F19271F006BEA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86D8D41F19271F006BEA6E /* AppDelegate.swift */; };
+		DF86D8D71F19271F006BEA6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86D8D61F19271F006BEA6E /* ViewController.swift */; };
+		DF86D8DA1F19271F006BEA6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF86D8D81F19271F006BEA6E /* Main.storyboard */; };
+		DF86D8DD1F19271F006BEA6E /* Dijkstra.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF86D8DB1F19271F006BEA6E /* Dijkstra.xcdatamodeld */; };
+		DF86D8DF1F19271F006BEA6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF86D8DE1F19271F006BEA6E /* Assets.xcassets */; };
+		DF86D8E21F19271F006BEA6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF86D8E01F19271F006BEA6E /* LaunchScreen.storyboard */; };
+		DF86D8ED1F19271F006BEA6E /* DijkstraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86D8EC1F19271F006BEA6E /* DijkstraTests.swift */; };
+		DF86D8F81F19271F006BEA6E /* DijkstraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF86D8F71F19271F006BEA6E /* DijkstraUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DF86D8E91F19271F006BEA6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF86D8C91F19271E006BEA6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF86D8D01F19271E006BEA6E;
+			remoteInfo = Dijkstra;
+		};
+		DF86D8F41F19271F006BEA6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF86D8C91F19271E006BEA6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF86D8D01F19271E006BEA6E;
+			remoteInfo = Dijkstra;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DF86D8D11F19271E006BEA6E /* Dijkstra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dijkstra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF86D8D41F19271F006BEA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DF86D8D61F19271F006BEA6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DF86D8D91F19271F006BEA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DF86D8DC1F19271F006BEA6E /* Dijkstra.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dijkstra.xcdatamodel; sourceTree = "<group>"; };
+		DF86D8DE1F19271F006BEA6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DF86D8E11F19271F006BEA6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DF86D8E31F19271F006BEA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF86D8E81F19271F006BEA6E /* DijkstraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DijkstraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF86D8EC1F19271F006BEA6E /* DijkstraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DijkstraTests.swift; sourceTree = "<group>"; };
+		DF86D8EE1F19271F006BEA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF86D8F31F19271F006BEA6E /* DijkstraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DijkstraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF86D8F71F19271F006BEA6E /* DijkstraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DijkstraUITests.swift; sourceTree = "<group>"; };
+		DF86D8F91F19271F006BEA6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DF86D8CE1F19271E006BEA6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF86D8E51F19271F006BEA6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF86D8F01F19271F006BEA6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DF86D8C81F19271E006BEA6E = {
+			isa = PBXGroup;
+			children = (
+				DF86D8D31F19271F006BEA6E /* Dijkstra */,
+				DF86D8EB1F19271F006BEA6E /* DijkstraTests */,
+				DF86D8F61F19271F006BEA6E /* DijkstraUITests */,
+				DF86D8D21F19271E006BEA6E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DF86D8D21F19271E006BEA6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DF86D8D11F19271E006BEA6E /* Dijkstra.app */,
+				DF86D8E81F19271F006BEA6E /* DijkstraTests.xctest */,
+				DF86D8F31F19271F006BEA6E /* DijkstraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DF86D8D31F19271F006BEA6E /* Dijkstra */ = {
+			isa = PBXGroup;
+			children = (
+				DF86D8D41F19271F006BEA6E /* AppDelegate.swift */,
+				DF86D8D61F19271F006BEA6E /* ViewController.swift */,
+				DF86D8D81F19271F006BEA6E /* Main.storyboard */,
+				DF86D8DE1F19271F006BEA6E /* Assets.xcassets */,
+				DF86D8E01F19271F006BEA6E /* LaunchScreen.storyboard */,
+				DF86D8E31F19271F006BEA6E /* Info.plist */,
+				DF86D8DB1F19271F006BEA6E /* Dijkstra.xcdatamodeld */,
+			);
+			path = Dijkstra;
+			sourceTree = "<group>";
+		};
+		DF86D8EB1F19271F006BEA6E /* DijkstraTests */ = {
+			isa = PBXGroup;
+			children = (
+				DF86D8EC1F19271F006BEA6E /* DijkstraTests.swift */,
+				DF86D8EE1F19271F006BEA6E /* Info.plist */,
+			);
+			path = DijkstraTests;
+			sourceTree = "<group>";
+		};
+		DF86D8F61F19271F006BEA6E /* DijkstraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DF86D8F71F19271F006BEA6E /* DijkstraUITests.swift */,
+				DF86D8F91F19271F006BEA6E /* Info.plist */,
+			);
+			path = DijkstraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DF86D8D01F19271E006BEA6E /* Dijkstra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF86D8FC1F19271F006BEA6E /* Build configuration list for PBXNativeTarget "Dijkstra" */;
+			buildPhases = (
+				DF86D8CD1F19271E006BEA6E /* Sources */,
+				DF86D8CE1F19271E006BEA6E /* Frameworks */,
+				DF86D8CF1F19271E006BEA6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dijkstra;
+			productName = Dijkstra;
+			productReference = DF86D8D11F19271E006BEA6E /* Dijkstra.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DF86D8E71F19271F006BEA6E /* DijkstraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF86D8FF1F19271F006BEA6E /* Build configuration list for PBXNativeTarget "DijkstraTests" */;
+			buildPhases = (
+				DF86D8E41F19271F006BEA6E /* Sources */,
+				DF86D8E51F19271F006BEA6E /* Frameworks */,
+				DF86D8E61F19271F006BEA6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF86D8EA1F19271F006BEA6E /* PBXTargetDependency */,
+			);
+			name = DijkstraTests;
+			productName = DijkstraTests;
+			productReference = DF86D8E81F19271F006BEA6E /* DijkstraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DF86D8F21F19271F006BEA6E /* DijkstraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF86D9021F19271F006BEA6E /* Build configuration list for PBXNativeTarget "DijkstraUITests" */;
+			buildPhases = (
+				DF86D8EF1F19271F006BEA6E /* Sources */,
+				DF86D8F01F19271F006BEA6E /* Frameworks */,
+				DF86D8F11F19271F006BEA6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF86D8F51F19271F006BEA6E /* PBXTargetDependency */,
+			);
+			name = DijkstraUITests;
+			productName = DijkstraUITests;
+			productReference = DF86D8F31F19271F006BEA6E /* DijkstraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DF86D8C91F19271E006BEA6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Michelline Tran";
+				TargetAttributes = {
+					DF86D8D01F19271E006BEA6E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5QNKR8RC4W;
+						ProvisioningStyle = Automatic;
+					};
+					DF86D8E71F19271F006BEA6E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5QNKR8RC4W;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DF86D8D01F19271E006BEA6E;
+					};
+					DF86D8F21F19271F006BEA6E = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5QNKR8RC4W;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DF86D8D01F19271E006BEA6E;
+					};
+				};
+			};
+			buildConfigurationList = DF86D8CC1F19271E006BEA6E /* Build configuration list for PBXProject "Dijkstra" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DF86D8C81F19271E006BEA6E;
+			productRefGroup = DF86D8D21F19271E006BEA6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DF86D8D01F19271E006BEA6E /* Dijkstra */,
+				DF86D8E71F19271F006BEA6E /* DijkstraTests */,
+				DF86D8F21F19271F006BEA6E /* DijkstraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DF86D8CF1F19271E006BEA6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF86D8E21F19271F006BEA6E /* LaunchScreen.storyboard in Resources */,
+				DF86D8DF1F19271F006BEA6E /* Assets.xcassets in Resources */,
+				DF86D8DA1F19271F006BEA6E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF86D8E61F19271F006BEA6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF86D8F11F19271F006BEA6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DF86D8CD1F19271E006BEA6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF86D8DD1F19271F006BEA6E /* Dijkstra.xcdatamodeld in Sources */,
+				DF86D8D71F19271F006BEA6E /* ViewController.swift in Sources */,
+				DF86D8D51F19271F006BEA6E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF86D8E41F19271F006BEA6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF86D8ED1F19271F006BEA6E /* DijkstraTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF86D8EF1F19271F006BEA6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF86D8F81F19271F006BEA6E /* DijkstraUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF86D8EA1F19271F006BEA6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF86D8D01F19271E006BEA6E /* Dijkstra */;
+			targetProxy = DF86D8E91F19271F006BEA6E /* PBXContainerItemProxy */;
+		};
+		DF86D8F51F19271F006BEA6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF86D8D01F19271E006BEA6E /* Dijkstra */;
+			targetProxy = DF86D8F41F19271F006BEA6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DF86D8D81F19271F006BEA6E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF86D8D91F19271F006BEA6E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DF86D8E01F19271F006BEA6E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DF86D8E11F19271F006BEA6E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DF86D8FA1F19271F006BEA6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DF86D8FB1F19271F006BEA6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DF86D8FD1F19271F006BEA6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5QNKR8RC4W;
+				INFOPLIST_FILE = Dijkstra/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = michellinetran.Dijkstra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DF86D8FE1F19271F006BEA6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5QNKR8RC4W;
+				INFOPLIST_FILE = Dijkstra/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = michellinetran.Dijkstra;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DF86D9001F19271F006BEA6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5QNKR8RC4W;
+				INFOPLIST_FILE = DijkstraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = michellinetran.DijkstraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dijkstra.app/Dijkstra";
+			};
+			name = Debug;
+		};
+		DF86D9011F19271F006BEA6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5QNKR8RC4W;
+				INFOPLIST_FILE = DijkstraTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = michellinetran.DijkstraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dijkstra.app/Dijkstra";
+			};
+			name = Release;
+		};
+		DF86D9031F19271F006BEA6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 5QNKR8RC4W;
+				INFOPLIST_FILE = DijkstraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = michellinetran.DijkstraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Dijkstra;
+			};
+			name = Debug;
+		};
+		DF86D9041F19271F006BEA6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 5QNKR8RC4W;
+				INFOPLIST_FILE = DijkstraUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = michellinetran.DijkstraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Dijkstra;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DF86D8CC1F19271E006BEA6E /* Build configuration list for PBXProject "Dijkstra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF86D8FA1F19271F006BEA6E /* Debug */,
+				DF86D8FB1F19271F006BEA6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF86D8FC1F19271F006BEA6E /* Build configuration list for PBXNativeTarget "Dijkstra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF86D8FD1F19271F006BEA6E /* Debug */,
+				DF86D8FE1F19271F006BEA6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DF86D8FF1F19271F006BEA6E /* Build configuration list for PBXNativeTarget "DijkstraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF86D9001F19271F006BEA6E /* Debug */,
+				DF86D9011F19271F006BEA6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DF86D9021F19271F006BEA6E /* Build configuration list for PBXNativeTarget "DijkstraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DF86D9031F19271F006BEA6E /* Debug */,
+				DF86D9041F19271F006BEA6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DF86D8DB1F19271F006BEA6E /* Dijkstra.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DF86D8DC1F19271F006BEA6E /* Dijkstra.xcdatamodel */,
+			);
+			currentVersion = DF86D8DC1F19271F006BEA6E /* Dijkstra.xcdatamodel */;
+			path = Dijkstra.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DF86D8C91F19271E006BEA6E /* Project object */;
+}
