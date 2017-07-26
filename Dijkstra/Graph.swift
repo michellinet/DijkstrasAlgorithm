@@ -24,11 +24,14 @@ struct Graph {
         var vertex = startVertex
         
         while vertex.neighbors.first != nil {
-            if vertex.key == endingDestination {
+            let leastWeightNeighbor = vertex.neighbors.min(by: { (a, b) -> Bool in a.weight < b.weight } )
+
+            guard let nextVertex = leastWeightNeighbor?.destination else { return shortestPath }
+            shortestPath.append(nextVertex)
+
+            if nextVertex.key == endingDestination {
                 break
             } else {
-                let nextVertex = vertex.neighbors[0].destination
-                shortestPath.append(nextVertex)
                 vertex = nextVertex
             }
         }
