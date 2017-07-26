@@ -72,4 +72,56 @@ class DijkstraTests: XCTestCase {
 
         XCTAssertEqual(expectedPath, shortestPath)
     }
+
+    func testMoreMultipleOptionsGraph() {
+        let vertexM = Vertex(key: "M", neighbors: [])
+        let vertexE = Vertex(key: "E", neighbors: [Edge(destination: vertexM, weight: 3)])
+        var vertexD = Vertex(key: "D", neighbors: [Edge(destination: vertexE, weight: 8)])
+        var vertexA = Vertex(key: "A", neighbors: [Edge(destination: vertexD, weight: 4)])
+        let vertexB = Vertex(key: "B", neighbors: [Edge(destination: vertexA, weight: 3), Edge(destination: vertexE, weight: 1)])
+        vertexA.neighbors.append(Edge(destination: vertexB, weight: 3))
+        vertexD.neighbors.append(Edge(destination: vertexB, weight: 5))
+
+        let simpleGraph = Graph(vertices: [vertexA, vertexD, vertexE, vertexM, vertexB])
+
+        let shortestPath = simpleGraph.processDijkstra(source: vertexA.key, to: vertexE.key)
+        let expectedPath = [vertexA, vertexB, vertexE]
+
+        XCTAssertEqual(expectedPath, shortestPath)
+    }
+
+    func testVerticesWeDontNeed() {
+        let vertexM = Vertex(key: "M", neighbors: [])
+        let vertexE = Vertex(key: "E", neighbors: [Edge(destination: vertexM, weight: 3)])
+        var vertexD = Vertex(key: "D", neighbors: [Edge(destination: vertexE, weight: 8)])
+        var vertexA = Vertex(key: "A", neighbors: [Edge(destination: vertexD, weight: 4)])
+        let vertexB = Vertex(key: "B", neighbors: [Edge(destination: vertexA, weight: 3), Edge(destination: vertexE, weight: 1)])
+        vertexA.neighbors.append(Edge(destination: vertexB, weight: 3))
+        vertexD.neighbors.append(Edge(destination: vertexB, weight: 5))
+
+        let simpleGraph = Graph(vertices: [vertexA, vertexD, vertexE, vertexM, vertexB])
+
+        let shortestPath = simpleGraph.processDijkstra(source: vertexA.key, to: vertexB.key)
+        let expectedPath = [vertexA, vertexB]
+
+        XCTAssertEqual(expectedPath, shortestPath)
+    }
+
+    func testLotsOfVerticesInPath() {
+        let vertexM = Vertex(key: "M", neighbors: [])
+        let vertexE = Vertex(key: "E", neighbors: [Edge(destination: vertexM, weight: 3)])
+        var vertexD = Vertex(key: "D", neighbors: [Edge(destination: vertexE, weight: 8)])
+        var vertexA = Vertex(key: "A", neighbors: [Edge(destination: vertexD, weight: 4)])
+        let vertexB = Vertex(key: "B", neighbors: [Edge(destination: vertexA, weight: 3), Edge(destination: vertexE, weight: 1)])
+        vertexA.neighbors.append(Edge(destination: vertexB, weight: 3))
+        vertexD.neighbors.append(Edge(destination: vertexB, weight: 5))
+
+        let simpleGraph = Graph(vertices: [vertexA, vertexD, vertexE, vertexM, vertexB])
+
+        let shortestPath = simpleGraph.processDijkstra(source: vertexA.key, to: vertexM.key)
+        let expectedPath = [vertexA, vertexB, vertexE, vertexM]
+
+        XCTAssertEqual(expectedPath, shortestPath)
+    }
+
 }
