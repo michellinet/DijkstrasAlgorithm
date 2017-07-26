@@ -44,7 +44,7 @@ class DijkstraTests: XCTestCase {
         XCTAssertEqual(expectedPath, shortestPath)
     }
     
-/*    func testExtraNodeInGraph() {
+    func testExtraNodeInGraph() {
         let extraVertex = Vertex(key: "M", neighbors: [])
         let endingVertex = Vertex(key: "E", neighbors: [Edge(destination: extraVertex, weight: 3)])
         let middleVertex = Vertex(key: "D", neighbors: [Edge(destination: endingVertex, weight: 8)])
@@ -56,5 +56,4 @@ class DijkstraTests: XCTestCase {
         
         XCTAssertEqual(expectedPath, shortestPath)
     }
-*/
 }

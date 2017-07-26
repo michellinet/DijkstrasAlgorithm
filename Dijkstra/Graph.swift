@@ -18,20 +18,21 @@ struct Graph {
             vertex.key == source
         }
         
-        guard let startVertex = startingVertex else {
-            return shortestPath
-        }
+        guard let startVertex = startingVertex else { return shortestPath }
         shortestPath.append(startVertex)
         
         var vertex = startVertex
         
         while vertex.neighbors.first != nil {
-            let nextVertex = vertex.neighbors[0].destination
-            shortestPath.append(nextVertex)
-            vertex = nextVertex
+            if vertex.key == endingDestination {
+                break
+            } else {
+                let nextVertex = vertex.neighbors[0].destination
+                shortestPath.append(nextVertex)
+                vertex = nextVertex
+            }
         }
-        
-        
+
         return shortestPath
     }
 }
