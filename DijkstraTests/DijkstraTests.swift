@@ -20,108 +20,128 @@ class DijkstraTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+//    
+//    func testSimpleGraph() {
+//        let endingVertex = Vertex(key: "B", neighbors: [])
+//        let startingVertex = Vertex(key: "A", neighbors: [Edge(destination: endingVertex, weight: 5)])
+//        
+//        let simpleGraph = Graph(vertices: [startingVertex, endingVertex])
+//        let shortestPath = simpleGraph.processDijkstra(source: startingVertex.key, to: endingVertex.key)
+//        let expectedPath = [startingVertex, endingVertex]
+//        
+//        XCTAssertEqual(expectedPath, shortestPath)
+//    }
+//    
+//    func testNotSoSimpleGraph() {
+//        let endingVertex = Vertex(key: "E", neighbors: [])
+//        let middleVertex = Vertex(key: "D", neighbors: [Edge(destination: endingVertex, weight: 8)])
+//        let startingVertex = Vertex(key: "A", neighbors: [Edge(destination: middleVertex, weight: 4)])
+//        let simpleGraph = Graph(vertices: [startingVertex, endingVertex, middleVertex])
+//        
+//        let shortestPath = simpleGraph.processDijkstra(source: startingVertex.key, to: endingVertex.key)
+//        let expectedPath = [startingVertex, middleVertex, endingVertex]
+//        
+//        XCTAssertEqual(expectedPath, shortestPath)
+//    }
+//    
+//    func testExtraNodeInGraph() {
+//        let extraVertex = Vertex(key: "M", neighbors: [])
+//        let endingVertex = Vertex(key: "E", neighbors: [Edge(destination: extraVertex, weight: 3)])
+//        let middleVertex = Vertex(key: "D", neighbors: [Edge(destination: endingVertex, weight: 8)])
+//        let startingVertex = Vertex(key: "A", neighbors: [Edge(destination: middleVertex, weight: 4)])
+//        let simpleGraph = Graph(vertices: [startingVertex, endingVertex, middleVertex])
+//        
+//        let shortestPath = simpleGraph.processDijkstra(source: startingVertex.key, to: endingVertex.key)
+//        let expectedPath = [startingVertex, middleVertex, endingVertex]
+//        
+//        XCTAssertEqual(expectedPath, shortestPath)
+//    }
+//
+//    func testMultipleOptionsGraph() {
+//        let vertexM = Vertex(key: "M", neighbors: [])
+//        let vertexE = Vertex(key: "E", neighbors: [Edge(destination: vertexM, weight: 3)])
+//        let vertexD = Vertex(key: "D", neighbors: [Edge(destination: vertexE, weight: 8)])
+//        var vertexA = Vertex(key: "A", neighbors: [Edge(destination: vertexD, weight: 4)])
+//        let vertexB = Vertex(key: "B", neighbors: [Edge(destination: vertexA, weight: 3), Edge(destination: vertexE, weight: 1)])
+//        vertexA.neighbors.append(Edge(destination: vertexB, weight: 3))
+//
+//        let simpleGraph = Graph(vertices: [vertexA, vertexD, vertexE, vertexM, vertexB])
+//
+//        let shortestPath = simpleGraph.processDijkstra(source: vertexA.key, to: vertexE.key)
+//        let expectedPath = [vertexA, vertexB, vertexE]
+//
+//        XCTAssertEqual(expectedPath, shortestPath)
+//    }
+//
+//    func testMoreMultipleOptionsGraph() {
+//        let vertexM = Vertex(key: "M", neighbors: [])
+//        let vertexE = Vertex(key: "E", neighbors: [Edge(destination: vertexM, weight: 3)])
+//        var vertexD = Vertex(key: "D", neighbors: [Edge(destination: vertexE, weight: 8)])
+//        var vertexA = Vertex(key: "A", neighbors: [Edge(destination: vertexD, weight: 4)])
+//        let vertexB = Vertex(key: "B", neighbors: [Edge(destination: vertexA, weight: 3), Edge(destination: vertexE, weight: 1)])
+//        vertexA.neighbors.append(Edge(destination: vertexB, weight: 3))
+//        vertexD.neighbors.append(Edge(destination: vertexB, weight: 5))
+//
+//        let simpleGraph = Graph(vertices: [vertexA, vertexD, vertexE, vertexM, vertexB])
+//
+//        let shortestPath = simpleGraph.processDijkstra(source: vertexA.key, to: vertexE.key)
+//        let expectedPath = [vertexA, vertexB, vertexE]
+//
+//        XCTAssertEqual(expectedPath, shortestPath)
+//    }
+//
+//    func testVerticesWeDontNeed() {
+//        let vertexM = Vertex(key: "M", neighbors: [])
+//        let vertexE = Vertex(key: "E", neighbors: [Edge(destination: vertexM, weight: 3)])
+//        var vertexD = Vertex(key: "D", neighbors: [Edge(destination: vertexE, weight: 8)])
+//        var vertexA = Vertex(key: "A", neighbors: [Edge(destination: vertexD, weight: 4)])
+//        let vertexB = Vertex(key: "B", neighbors: [Edge(destination: vertexA, weight: 3), Edge(destination: vertexE, weight: 1)])
+//        vertexA.neighbors.append(Edge(destination: vertexB, weight: 3))
+//        vertexD.neighbors.append(Edge(destination: vertexB, weight: 5))
+//
+//        let simpleGraph = Graph(vertices: [vertexA, vertexD, vertexE, vertexM, vertexB])
+//
+//        let shortestPath = simpleGraph.processDijkstra(source: vertexA.key, to: vertexB.key)
+//        let expectedPath = [vertexA, vertexB]
+//
+//        XCTAssertEqual(expectedPath, shortestPath)
+//    }
+//
+//    func testLotsOfVerticesInPath() {
+//        let vertexM = Vertex(key: "M", neighbors: [])
+//        let vertexE = Vertex(key: "E", neighbors: [Edge(destination: vertexM, weight: 3)])
+//        var vertexD = Vertex(key: "D", neighbors: [Edge(destination: vertexE, weight: 8)])
+//        var vertexA = Vertex(key: "A", neighbors: [Edge(destination: vertexD, weight: 4)])
+//        let vertexB = Vertex(key: "B", neighbors: [Edge(destination: vertexA, weight: 3), Edge(destination: vertexE, weight: 1)])
+//        vertexA.neighbors.append(Edge(destination: vertexB, weight: 3))
+//        vertexD.neighbors.append(Edge(destination: vertexB, weight: 5))
+//
+//        let simpleGraph = Graph(vertices: [vertexA, vertexD, vertexE, vertexM, vertexB])
+//
+//        let shortestPath = simpleGraph.processDijkstra(source: vertexA.key, to: vertexM.key)
+//        let expectedPath = [vertexA, vertexB, vertexE, vertexM]
+//
+//        XCTAssertEqual(expectedPath, shortestPath)
+//    }
     
-    func testSimpleGraph() {
-        let endingVertex = Vertex(key: "B", neighbors: [])
-        let startingVertex = Vertex(key: "A", neighbors: [Edge(destination: endingVertex, weight: 5)])
+    // Tests for Official Algorithm
+    
+    func testOfficial() {
+        let graph = OGraph()
+        let nodeA = graph.addNode(key: "A")
+        let nodeB = graph.addNode(key: "B")
+        graph.addEdge(source: nodeA, neighbor: nodeB, weight: 1)
         
-        let simpleGraph = Graph(vertices: [startingVertex, endingVertex])
-        let shortestPath = simpleGraph.processDijkstra(source: startingVertex.key, to: endingVertex.key)
-        let expectedPath = [startingVertex, endingVertex]
+        let actualPath = graph.processDijkstra(source: nodeA, destination: nodeB)
         
-        XCTAssertEqual(expectedPath, shortestPath)
+        let expectedPath = Path()
+        expectedPath.total = 1
+        expectedPath.destination = nodeB
+        expectedPath.previous = nil
+        
+        XCTAssertEqual(expectedPath, actualPath)
+
     }
     
-    func testNotSoSimpleGraph() {
-        let endingVertex = Vertex(key: "E", neighbors: [])
-        let middleVertex = Vertex(key: "D", neighbors: [Edge(destination: endingVertex, weight: 8)])
-        let startingVertex = Vertex(key: "A", neighbors: [Edge(destination: middleVertex, weight: 4)])
-        let simpleGraph = Graph(vertices: [startingVertex, endingVertex, middleVertex])
-        
-        let shortestPath = simpleGraph.processDijkstra(source: startingVertex.key, to: endingVertex.key)
-        let expectedPath = [startingVertex, middleVertex, endingVertex]
-        
-        XCTAssertEqual(expectedPath, shortestPath)
-    }
-    
-    func testExtraNodeInGraph() {
-        let extraVertex = Vertex(key: "M", neighbors: [])
-        let endingVertex = Vertex(key: "E", neighbors: [Edge(destination: extraVertex, weight: 3)])
-        let middleVertex = Vertex(key: "D", neighbors: [Edge(destination: endingVertex, weight: 8)])
-        let startingVertex = Vertex(key: "A", neighbors: [Edge(destination: middleVertex, weight: 4)])
-        let simpleGraph = Graph(vertices: [startingVertex, endingVertex, middleVertex])
-        
-        let shortestPath = simpleGraph.processDijkstra(source: startingVertex.key, to: endingVertex.key)
-        let expectedPath = [startingVertex, middleVertex, endingVertex]
-        
-        XCTAssertEqual(expectedPath, shortestPath)
-    }
-
-    func testMultipleOptionsGraph() {
-        let vertexM = Vertex(key: "M", neighbors: [])
-        let vertexE = Vertex(key: "E", neighbors: [Edge(destination: vertexM, weight: 3)])
-        let vertexD = Vertex(key: "D", neighbors: [Edge(destination: vertexE, weight: 8)])
-        var vertexA = Vertex(key: "A", neighbors: [Edge(destination: vertexD, weight: 4)])
-        let vertexB = Vertex(key: "B", neighbors: [Edge(destination: vertexA, weight: 3), Edge(destination: vertexE, weight: 1)])
-        vertexA.neighbors.append(Edge(destination: vertexB, weight: 3))
-
-        let simpleGraph = Graph(vertices: [vertexA, vertexD, vertexE, vertexM, vertexB])
-
-        let shortestPath = simpleGraph.processDijkstra(source: vertexA.key, to: vertexE.key)
-        let expectedPath = [vertexA, vertexB, vertexE]
-
-        XCTAssertEqual(expectedPath, shortestPath)
-    }
-
-    func testMoreMultipleOptionsGraph() {
-        let vertexM = Vertex(key: "M", neighbors: [])
-        let vertexE = Vertex(key: "E", neighbors: [Edge(destination: vertexM, weight: 3)])
-        var vertexD = Vertex(key: "D", neighbors: [Edge(destination: vertexE, weight: 8)])
-        var vertexA = Vertex(key: "A", neighbors: [Edge(destination: vertexD, weight: 4)])
-        let vertexB = Vertex(key: "B", neighbors: [Edge(destination: vertexA, weight: 3), Edge(destination: vertexE, weight: 1)])
-        vertexA.neighbors.append(Edge(destination: vertexB, weight: 3))
-        vertexD.neighbors.append(Edge(destination: vertexB, weight: 5))
-
-        let simpleGraph = Graph(vertices: [vertexA, vertexD, vertexE, vertexM, vertexB])
-
-        let shortestPath = simpleGraph.processDijkstra(source: vertexA.key, to: vertexE.key)
-        let expectedPath = [vertexA, vertexB, vertexE]
-
-        XCTAssertEqual(expectedPath, shortestPath)
-    }
-
-    func testVerticesWeDontNeed() {
-        let vertexM = Vertex(key: "M", neighbors: [])
-        let vertexE = Vertex(key: "E", neighbors: [Edge(destination: vertexM, weight: 3)])
-        var vertexD = Vertex(key: "D", neighbors: [Edge(destination: vertexE, weight: 8)])
-        var vertexA = Vertex(key: "A", neighbors: [Edge(destination: vertexD, weight: 4)])
-        let vertexB = Vertex(key: "B", neighbors: [Edge(destination: vertexA, weight: 3), Edge(destination: vertexE, weight: 1)])
-        vertexA.neighbors.append(Edge(destination: vertexB, weight: 3))
-        vertexD.neighbors.append(Edge(destination: vertexB, weight: 5))
-
-        let simpleGraph = Graph(vertices: [vertexA, vertexD, vertexE, vertexM, vertexB])
-
-        let shortestPath = simpleGraph.processDijkstra(source: vertexA.key, to: vertexB.key)
-        let expectedPath = [vertexA, vertexB]
-
-        XCTAssertEqual(expectedPath, shortestPath)
-    }
-
-    func testLotsOfVerticesInPath() {
-        let vertexM = Vertex(key: "M", neighbors: [])
-        let vertexE = Vertex(key: "E", neighbors: [Edge(destination: vertexM, weight: 3)])
-        var vertexD = Vertex(key: "D", neighbors: [Edge(destination: vertexE, weight: 8)])
-        var vertexA = Vertex(key: "A", neighbors: [Edge(destination: vertexD, weight: 4)])
-        let vertexB = Vertex(key: "B", neighbors: [Edge(destination: vertexA, weight: 3), Edge(destination: vertexE, weight: 1)])
-        vertexA.neighbors.append(Edge(destination: vertexB, weight: 3))
-        vertexD.neighbors.append(Edge(destination: vertexB, weight: 5))
-
-        let simpleGraph = Graph(vertices: [vertexA, vertexD, vertexE, vertexM, vertexB])
-
-        let shortestPath = simpleGraph.processDijkstra(source: vertexA.key, to: vertexM.key)
-        let expectedPath = [vertexA, vertexB, vertexE, vertexM]
-
-        XCTAssertEqual(expectedPath, shortestPath)
-    }
 
 }

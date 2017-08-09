@@ -27,12 +27,37 @@ class OEdge {
     }
 }
 
+//An object to track each node visit
 class Path {
+    //the total cumulative edge weight to reach a particular destination
     var total: Int!
+    
+    //the desired destination of the path
     var destination: Node
-    var previous: Path!
+   
+    //the previous Path taken to reach the current (starting) node
+    var previous: Path?
     
     init(){
         destination = Node()
+    }
+}
+
+extension Node: Equatable {
+    static func ==(lhs: Node, rhs: Node) -> Bool {
+        return lhs.key == rhs.key
+    }
+}
+
+extension Path: Equatable {
+    static func ==(lhs: Path, rhs: Path) -> Bool {
+        var lhsPreviousPath = Path()
+        var rhsPreviousPath = Path()
+        if let lhsPrevious = lhs.previous, let rhsPrevious = rhs.previous {
+            lhsPreviousPath = lhsPrevious
+            rhsPreviousPath = rhsPrevious
+        }
+        
+        return lhs.total == rhs.total && lhs.destination == rhs.destination && lhsPreviousPath == rhsPreviousPath
     }
 }

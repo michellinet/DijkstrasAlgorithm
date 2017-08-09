@@ -7,8 +7,8 @@
 //
 
 import Foundation
-
-struct Edge {
-    var destination: Vertex
-    var weight: Int
-}
+//
+//struct Edge {
+//    var destination: Vertex
+//    var weight: Int
+//}
