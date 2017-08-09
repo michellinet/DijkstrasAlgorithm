@@ -30,7 +30,7 @@ class OEdge {
 //An object to track each node visit
 class Path {
     //the total cumulative edge weight to reach a particular destination
-    var total: Int!
+    var total = Int.max
     
     //the desired destination of the path
     var destination: Node
@@ -40,6 +40,31 @@ class Path {
     
     init(){
         destination = Node()
+    }
+
+    func printNodesInPath(source: Node) -> String {
+        var previousPath = previous
+        var nodes = [Node]()
+
+        nodes.append(destination)
+
+        while previousPath != nil {
+            if let path = previousPath {
+               nodes.append(path.destination)
+               previousPath = path.previous
+            }
+        }
+        nodes.append(source)
+
+        nodes.reverse()
+
+        var pathString = ""
+        for node in nodes {
+            guard let id = node.key else { continue }
+            pathString += id
+        }
+
+        return pathString
     }
 }
 
@@ -51,13 +76,8 @@ extension Node: Equatable {
 
 extension Path: Equatable {
     static func ==(lhs: Path, rhs: Path) -> Bool {
-        var lhsPreviousPath = Path()
-        var rhsPreviousPath = Path()
-        if let lhsPrevious = lhs.previous, let rhsPrevious = rhs.previous {
-            lhsPreviousPath = lhsPrevious
-            rhsPreviousPath = rhsPrevious
-        }
+
         
-        return lhs.total == rhs.total && lhs.destination == rhs.destination && lhsPreviousPath == rhsPreviousPath
+        return lhs.total == rhs.total && lhs.destination == rhs.destination
     }
 }
